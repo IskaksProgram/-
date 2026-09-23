@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255, 255, 255, 0.06),
+            transparent 35%
+        ),
+        #0b0c0d;
+    color: #eeeeee;
+}
+
+
+/* =========================
+   СТРАНИЦЫ
+========================= */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.page.active {
+    display: flex;
+}
+
+
+/* =========================
+   ГЛАВНАЯ
+========================= */
+
+.home-box {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.home-box h1 {
+    font-size: 44px;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+}
+
+.home-box p {
+    color: #8e8e8e;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.home-buttons button {
+    width: 180px;
+}
+
+
+/* =========================
+   ФОРМЫ
+========================= */
+
+.form-box {
+    width: 100%;
+    max-width: 430px;
+    background: #151719;
+    border: 1px solid #2c2f31;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.register-box {
+    max-width: 500px;
+}
+
+.form-box h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 28px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    color: #bdbdbd;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    background: #0e1011;
+    border: 1px solid #303335;
+    border-radius: 7px;
+    color: #eeeeee;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #777777;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #666666;
+}
+
+select option {
+    background: #151719;
+    color: #ffffff;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+
+/* =========================
+   КНОПКИ
+========================= */
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 14px 25px;
+    background: #e5e5e5;
+    color: #111111;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+form button {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.agreement {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 8px 0;
+}
+
+.agreement input {
+    width: auto;
+    cursor: pointer;
+}
+
+
+/* =========================
+   ПЕРЕКЛЮЧЕНИЕ
+========================= */
+
+.switch-text {
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.switch-text span {
+    color: #dddddd;
+    cursor: pointer;
+}
+
+.switch-text span:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   НАЗАД
+========================= */
+
+.back-button {
+    width: 100%;
+    margin-top: 12px;
+    background: #25282a;
+    color: #dddddd;
+    border: 1px solid #36393b;
+}
+
+.back-button:hover {
+    background: #303335;
+}
+
+
+/* =========================
+   ТЕЛЕФОН
+========================= */
+
+@media (max-width: 600px) {
+
+    .home-box h1 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+    }
+
+    .home-buttons button {
+        width: 100%;
+    }
+
+    .form-box {
+        padding: 25px 20px;
+    }
+}

@@ -1,0 +1,210 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ГЛАВНАЯ СТРАНИЦА -->
+    <section id="homePage" class="page active">
+        <div class="home-box">
+            <h1>STUDENT PORTAL</h1>
+            <p>Добро пожаловать в студенческий портал</p>
+
+            <div class="home-buttons">
+                <button onclick="showPage('loginPage')">
+                    Войти
+                </button>
+
+                <button onclick="showPage('registerPage')">
+                    Регистрация
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- СТРАНИЦА ВХОДА -->
+    <section id="loginPage" class="page">
+        <div class="form-box">
+
+            <h2>Вход в аккаунт</h2>
+
+            <form id="loginForm">
+
+                <label>Email</label>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Введите Email"
+                    required
+                >
+
+                <label>Пароль</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Введите пароль"
+                    required
+                >
+
+                <button type="submit">
+                    Войти
+                </button>
+
+            </form>
+
+            <p class="switch-text">
+                Нет аккаунта?
+                <span onclick="showPage('registerPage')">
+                    Зарегистрироваться
+                </span>
+            </p>
+
+            <button
+                class="back-button"
+                onclick="showPage('homePage')">
+                ← Назад
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- СТРАНИЦА РЕГИСТРАЦИИ -->
+    <section id="registerPage" class="page">
+        <div class="form-box register-box">
+
+            <h2>Регистрация</h2>
+
+            <form id="registerForm">
+
+                <label>Имя</label>
+                <input
+                    type="text"
+                    id="firstName"
+                    placeholder="Введите имя"
+                    required
+                >
+
+                <label>Фамилия</label>
+                <input
+                    type="text"
+                    id="lastName"
+                    placeholder="Введите фамилию"
+                    required
+                >
+
+                <label>Email</label>
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Введите Email"
+                    required
+                >
+
+                <label>Телефон</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+996 XXX XXX XXX"
+                    required
+                >
+
+                <label>Пароль</label>
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Создайте пароль"
+                    required
+                >
+
+                <label>Дата рождения</label>
+                <input
+                    type="date"
+                    id="birthDate"
+                    required
+                >
+
+                <label>Пол</label>
+                <select id="gender" required>
+                    <option value="">Выберите пол</option>
+                    <option value="Мужской">Мужской</option>
+                    <option value="Женский">Женский</option>
+                </select>
+
+                <label>Специальность</label>
+                <select id="specialty" required>
+                    <option value="">Выберите специальность</option>
+                    <option value="Информационные системы и технологии">
+                        Информационные системы и технологии
+                    </option>
+                    <option value="Программная инженерия">
+                        Программная инженерия
+                    </option>
+                    <option value="Экономика">
+                        Экономика
+                    </option>
+                    <option value="Менеджмент">
+                        Менеджмент
+                    </option>
+                    <option value="Финансы и кредит">
+                        Финансы и кредит
+                    </option>
+                </select>
+
+                <label>Курс</label>
+                <select id="course" required>
+                    <option value="">Выберите курс</option>
+                    <option value="1 курс">1 курс</option>
+                    <option value="2 курс">2 курс</option>
+                    <option value="3 курс">3 курс</option>
+                    <option value="4 курс">4 курс</option>
+                </select>
+
+                <label>Комментарий</label>
+                <textarea
+                    id="comment"
+                    placeholder="Дополнительная информация"
+                ></textarea>
+
+                <label class="agreement">
+                    <input
+                        type="checkbox"
+                        id="agreement"
+                        required
+                    >
+                    <span>Я согласен с правилами</span>
+                </label>
+
+                <button type="submit">
+                    Зарегистрироваться
+                </button>
+
+            </form>
+
+            <p class="switch-text">
+                Уже есть аккаунт?
+                <span onclick="showPage('loginPage')">
+                    Войти
+                </span>
+            </p>
+
+            <button
+                class="back-button"
+                onclick="showPage('homePage')">
+                ← Назад
+            </button>
+
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
